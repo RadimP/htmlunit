@@ -34,13 +34,14 @@
             <p>
                 HtmlUnit is used as the underlying "browser" by different Open Source tools like
                 <a href="https://github.com/SeleniumHQ/selenium">WebDriver</a>,
+                <a href="https://arquillian.org/arquillian-extension-drone">Arquillian Drone</a>,
+                <a href="https://serenity-bdd.info">Serenity BDD</a>,
                 <a href="https://www.wetator.org/">WETATOR</a>,
                 <a href="https://github.com/jenkinsci/jenkins-test-harness">jenkins-test-harness</a>,
+                <a href="https://github.com/sbabcoc/Selenium-Foundation">Selenium Foundation</a>,
                 <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/testing.html#spring-mvc-test-server-htmlunit">Spring Testing</a>, ...
-                <a href="http://webtest.canoo.com/">Canoo WebTest</a>,
                 <a href="https://jwebunit.github.io/jwebunit/">JWebUnit</a>,
                 <a href="http://www.jboss.org/jsfunit/">JSFUnit</a>,
-                <a href="http://celerity.rubyforge.org/">Celerity</a>,
             </p>
             <p>
                 HtmlUnit was originally written by
@@ -56,9 +57,9 @@
         <section name="Where to find...">
             <p>
                 <dl>
-                    <dt>Latest release <date>January 22, 2023</date></dt>
+                    <dt>Latest release <date>April 16, 2023</date></dt>
                     <dd>
-                        <p><a href="https://sourceforge.net/projects/htmlunit/files/htmlunit/2.70.0/">version 2.70.0</a></p>
+                        <p><a href="https://github.com/HtmlUnit/htmlunit/releases/tag/3.1.0">version 3.1.0</a></p>
                     </dd>
 
                     <dt>Source code</dt>
@@ -177,9 +178,9 @@
                 For maven, you would add:
             <source><![CDATA[
 <dependency>
-    <groupId>net.sourceforge.htmlunit</groupId>
+    <groupId>org.htmlunit</groupId>
     <artifactId>htmlunit</artifactId>
-    <version>2.69.0</version>
+    <version>3.1.0</version>
 </dependency>]]></source>
             </p>
 

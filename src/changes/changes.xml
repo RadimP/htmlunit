@@ -7,17 +7,107 @@
     </properties>
 
     <body>
-        <release version="3.0.0" date="Febuary xx, 2023" description="Chrome/Edge 110, Firefox 110, HTML parser improved, Bugfixes">
+        <release version="3.1.0" date="April 16, 2023" description="Chrome/Edge 111, Firefox 111, Html parser improved, for..of loops for HTMLCollections, Bugfixes">
+            <action type="remove" dev="rbri">
+                INCOMPATIBLE CHANGE: CookieManager.getPort(URL) removed. Looks like
+                &lt;a href="http://code.google.com/p/googleappengine/issues/detail?id=4784"&gt; is solved.
+            </action>
+            <action type="fix" dev="RhinoTeam">
+                core-js: Handling of java primitive types in EqualObjectGraphs are fixed.
+            </action>
+            <action type="fix" dev="rbri">
+                neko: mention CVE-2023-26119 on the github page.
+            </action>
+            <action type="fix" dev="rbri">
+                neko: HtmlTagBalancer.reset() now resets the whole state.
+            </action>
+            <action type="fix" dev="rbri">
+                neko: fix search for message bundles (regression in 3.0.0).
+            </action>
+            <action type="fix" dev="rbri" issue="578">
+                Calls to hasOwnProperty() and getOwnPropertyDescriptor now taking care of form elements accessible from
+                the form object.
+            </action>
+            <action type="fix" dev="rbri">
+                Document.getSelection() is defined for Firefox and IE also.
+            </action>
+            <action type="fix" dev="rbri">
+                Document.getElementsByName() is defined for Firefox also.
+            </action>
+            <action type="fix" dev="rbri">
+                Document.getElementsByName() returns a NodeList instead of a HTMLCollection.
+            </action>
+            <action type="add" dev="rbri" issue="576">
+                HTMLCollections are iterable now - you can use them in for..of loops.
+            </action>
+            <action type="fix" dev="Lai Quang Duong">
+                Regexp "[^]" and "[^]" break translation of later char ranges in the regex.
+            </action>
+            <action type="add" dev="rbri" issue="573">
+                window.isSecureContext added.
+            </action>
+            <action type="fix" dev="rbri">
+                neko: Template tags are valid inside the head.
+            </action>
+            <action type="fix" dev="rbri">
+                neko: Script tags are valid inside select's.
+            </action>
+            <action type="fix" dev="rbri">
+                neko: The dialog tag closes a p tag.
+            </action>
+            <action type="fix" dev="Lai Quang Duong">
+                NPE fix for CSSStyleDeclaration.getPropertyPriority().
+            </action>
+            <action type="fix" dev="rbri" due-to="Lai Quang Duong">
+                Incorrect placement of character data outside the form if there is no closing form tag
+                (regression in 3.0.0).
+            </action>
+            <action type="fix" dev="Lai Quang Duong">
+                Regexp "[^]" should match any character, including new line.
+            </action>
+            <action type="fix" dev="rbri" issue="565">
+                XMLHttpRequest post request for the same origin must include the cookies (regression in 3.0.0).
+            </action>
+            <action type="fix" dev="rbri">
+                Use 'keep-alive' instead of 'Keep-Alive' for the connection header.
+            </action>
+        </release>
+
+
+        <release version="3.0.0" date="March 19, 2023" description="htmlunit.org, Chrome/Edge 110, Firefox 110, HTML parser improved, Bugfixes">
+            <action type="update" dev="rbri">
+                INCOMPATIBLE CHANGE: Value processing for input controls changed; typing now ONLY changes the value
+                but not the value attribute. As consequence all calls to setValueAttribute(..) hve to be replaced by setValue() or type().
+            </action>
             <action type="update" dev="rbri">
                 INCOMPATIBLE CHANGE: HtmlButton.getAttribute() now returns the plain attribute value also for 'type' attribute
                 instead of returning 'submit' in case the attribute is not set.
             </action>
             <action type="update" dev="rbri">
-                INCOMPATIBLE CHANGE: All packages renamed from net.sourceforge.htmlunit.xpath to org.htmlunit.xpath.
+                INCOMPATIBLE CHANGE: xpath: All packages renamed from net.sourceforge.htmlunit.xpath to org.htmlunit.xpath.
             </action>
             <action type="update" dev="rbri">
-                INCOMPATIBLE CHANGE: All packages renamed from net.sourceforge.htmlunit.cyberneko to org.htmlunit.cyberneko
+                INCOMPATIBLE CHANGE: neko: All packages renamed from net.sourceforge.htmlunit.cyberneko to org.htmlunit.cyberneko
                 and net.sourceforge.htmlunit.xerces to org.htmlunit.xerces.
+            </action>
+            <action type="update" dev="rbri">
+                INCOMPATIBLE CHANGE: cssparser: All packages renamed from net.sourceforge.htmlunit.cssparser to org.htmlunit.cssparser.
+            </action>
+            <action type="update" dev="rbri">
+                INCOMPATIBLE CHANGE: core-js: All packages renamed from net.sourceforge.htmlunit.corejs to org.htmlunit.corejs.
+            </action>
+            <action type="update" dev="rbri">
+                INTERNET_EXPLORER is deprecated.
+            </action>
+            <action type="fix" dev="rbri" issue="552">
+                core-js: Function.toString() now returns the source of the function without any reformating.
+            </action>
+            <action type="fix" dev="rbri">
+                DocumentFragment methods childElementCount(), firstElementChild(), and lastElementChild()
+                are ignoring non element nodes.
+            </action>
+            <action type="fix" dev="rbri" issue="561">
+                Document readystatechange event was not triggered on page loading.
             </action>
             <action type="fix" dev="rbri">
                 Style.item() function fixed.
